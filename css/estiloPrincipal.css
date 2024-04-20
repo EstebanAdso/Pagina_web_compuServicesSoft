@@ -1,0 +1,568 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    background-color: rgb(98, 34, 158);
+    background: linear-gradient(to right, rgb(82, 16, 143), #23197e);
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+dialog{
+    position: absolute;
+    height: 60vh;
+    width: 40%;
+    box-sizing: border-box;
+    z-index: 2;
+    top: 150px;
+    border-radius: 20px;
+    position: fixed;
+    padding: 0;
+    background-color: #fff;
+    
+}
+@keyframes modalOpen {
+    0% {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  dialog {
+    /* Estilos anteriores */
+    animation: modalOpen 0.7s ease-out;
+  }
+  
+
+.modal__title{
+    color: #bb1717;
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+.modal__text{
+    color: #444;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: justify;
+}
+
+.modal__content{
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+.modal__content img{
+
+   position: relative;
+   width: 60%;
+   height: 60%;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   margin: auto;
+   display: flex;
+}
+
+.modal__button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(156, 7, 51);
+    padding: 5px 15px;
+    color: white;
+    font-size: 1em;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+
+}
+.modal__precio{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+.modal__content span{
+    color: green;
+    font-size: 1.2em;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav p {
+    margin-left: 70px;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 22px;
+    transition: color 0.5s, background-color 0.3s;
+    
+}
+
+nav ul li a:hover {
+    color: #000;
+    background-color: #aaa;
+}
+
+section #containerPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    position: relative;
+}
+
+#containerPrincipal {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px 0 white;
+    animation: bg-fade 10s infinite ease-in-out;
+    transition: background-image 0.9s ease-in-out; /* Agregar transición */
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro semi-transparente */
+    pointer-events: none; /* Permitir que los eventos pasen a través del div */
+    transition: opacity 0.5s ease-in-out; /* Agregar transición de opacidad */
+}
+
+
+
+#containerPrincipal h1 {
+    position: absolute;
+    color: #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    text-shadow: 0 0 20px black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*SEGUNDA VISTA*/
+
+#container2 {
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 0 15px 0 rgb(255, 255, 255);
+    position: relative;
+    background-size: cover;
+    background-position: center;  
+}
+
+
+#container2 aside {
+    background-color: #0009;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 rgb(255, 255, 255);
+    padding-bottom: 20px;
+    margin-top: 170px;
+    transition-property: background-color;
+    transition-duration: 0.8s;
+}
+#container2 aside:hover {
+    background-color: #ccc;
+}
+
+#container2-contenido h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 3.7em;
+    padding: 30px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    transition-property: color;
+    transition-duration: 0.8s;
+}
+#container2 aside:hover h2{
+    color: blueviolet;
+}
+
+#container2-contenido p {
+    color: #ddd;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+    margin: 0 50px;
+    text-align: justify;
+    transition-property: color;
+    transition-duration: 0.8s;
+}
+
+#container2 aside:hover p{
+    color: #000;
+}
+
+#container2 button {
+    background-color: rgb(70, 175, 44);
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 42%;
+    letter-spacing: 2px;
+    padding: 20px;
+    border-radius: 5px;
+    color: #eee;
+    box-shadow: 0 0 10px 0 black;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#container2 button:hover {
+    background-color: #49f;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#productos {
+    width: 100%;
+    background-image: url(../imagenes/set6.jpg);
+    box-shadow: 0 0 20px 0 white;
+    padding-bottom: 50px;
+}
+
+#productos h2 {
+    text-align: center;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 0 8px black;
+}
+
+.producto {
+    display: flex;
+    width: 70%;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    transition-duration: 0.5s;
+    background-color: #eee;
+    border: 5px solid #444;
+}
+
+#imagen-div {
+    flex: 0 0 50%;
+}
+
+.imagen-producto {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+#contenido {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.titulo-producto {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+
+.contenido-producto {
+    font-size: 18px;
+    color: #666;
+    margin: 30px;
+}
+
+footer #pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+    padding: 0;
+    background-color: #ccc;
+    margin: 0px;
+    font-size: 15px;
+}
+
+footer ul {
+    text-align: center;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 5px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #48e;
+}
+/* Estilos para 1366 x 768 */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    header nav {
+        height: 60px;
+    }
+
+    nav p {
+        font-size: 17px;
+        margin-left: 60px;
+    }
+
+    nav ul {
+        font-size: 16px;
+        margin-right: 50px;
+    }
+
+    nav ul li a {
+        padding: 18px;
+        margin: 10px;
+    }
+    nav ul li a:hover {
+        color: #000;
+        background-color: #aaa;
+        font-size: 16px;
+        padding: 13px 0x;
+    }
+
+    #containerPrincipal h1 {
+        font-size: 4.5em;
+    }
+
+    #container2 aside {
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 150px;
+        padding: 30px 40px;
+    }
+
+    .titulo-sobre-nosotros {
+        font-size: 2em;
+    }
+
+    #container2-contenido p {
+        font-size: 14px;
+        margin: 20px 30px;
+    }
+
+    #container2 button {
+        margin-left: 40%;
+        padding: 13px;
+        font-size: 15px;
+    }
+
+    #productos h2 {
+        font-size: 3.5em;
+    }
+
+    .producto {
+        width: 80%;
+    }
+
+    .titulo-producto {
+        font-size: 21px;
+    }
+
+    .contenido-producto {
+        font-size: 17px;
+        margin: 25px;
+    }
+
+    footer #pie {
+        height: 180px;
+    }
+
+    footer ul {
+        font-size: 14px;
+    }
+}
+
+/*Vista Movil*/
+@media (max-width: 767px) {
+    header {
+        height: 180px;
+    }
+
+    header nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav p {
+        margin-left: 0;
+        font-size: 35px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        margin-right: 0;
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    nav ul li {
+        margin-bottom: 3px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        padding: 2px 0;
+        display: block;
+    }
+
+    nav ul li a:hover {
+        font-size: 20px;
+        color: #000;
+        background-color: #aaa;
+    }
+
+    #containerPrincipal h1 {
+        font-size: 3em;
+    }
+
+    #container2 {
+        height: 100vh;
+    }
+
+    #container2 aside {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 100px;
+        height: 60vh;
+    }
+
+    .titulo-sobre-nosotros {
+        font-size: 1.7em;
+        padding: 10px;
+    }
+
+    #container2-contenido p {
+        font-size: 17px;
+        margin: 0 20px;
+    }
+
+    #container2 button {
+        margin-left: 30%;
+        padding: 15px;
+        font-size: 10px;
+    }
+
+    #productos h2 {
+        font-size: 3em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .producto {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #imagen-div {
+        flex: 0 0 auto;
+    }
+
+    .imagen-producto {
+        max-width: 90%;
+    
+        
+    }
+
+    #contenido {
+        padding-left: 0;
+    }
+
+    .titulo-producto {
+        font-size: 20px;
+    }
+
+    .contenido-producto {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    footer #pie {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    footer ul {
+        font-size: 13px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #container2 aside {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .producto {
+        width: 80%;
+    }
+}
+
