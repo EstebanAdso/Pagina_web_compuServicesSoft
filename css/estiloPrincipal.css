@@ -12,36 +12,42 @@ header {
     height: 70px;
     z-index: 1;
 }
-dialog{
-    position: absolute;
-    height: 60vh;
-    width: 40%;
-    box-sizing: border-box;
-    z-index: 2;
-    top: 150px;
-    border-radius: 20px;
-    position: fixed;
-    padding: 0;
-    background-color: #fff;
-    
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
-@keyframes modalOpen {
-    0% {
-      opacity: 0;
-      transform: scale(0.4);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  
-  dialog {
-    /* Estilos anteriores */
-    animation: modalOpen 0.7s ease-out;
-  }
-  
+
+nav p {
+    margin-left: 70px;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 22px;
+    transition: color 0.5s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000;
+    background-color: #aaa;
+}
+
 
 .modal__title{
     color: #bb1717;
@@ -102,41 +108,38 @@ dialog{
     color: green;
     font-size: 1.2em;
 }
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
 
-nav p {
-    margin-left: 70px;
-    font-size: 22px;
-    color: #ffffff;
-    font-weight: 900;
-}
-
-nav ul {
-    list-style-type: none;
+dialog{
+    position: absolute;
+    height: 60vh;
+    width: 40%;
+    box-sizing: border-box;
+    z-index: 2;
+    top: 150px;
+    border-radius: 20px;
+    position: fixed;
     padding: 0;
-    margin: 0;
-    display: flex;
-    margin-right: 100px;
-    font-size: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 22px;
-    transition: color 0.5s, background-color 0.3s;
+    background-color: #fff;
     
 }
+@keyframes modalOpen {
+    0% {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  dialog {
+    /* Estilos anteriores */
+    animation: modalOpen 0.7s ease-out;
+  }
+  
 
-nav ul li a:hover {
-    color: #000;
-    background-color: #aaa;
-}
 
 section #containerPrincipal {
     display: flex;
@@ -193,6 +196,8 @@ section #containerPrincipal {
     position: relative;
     background-size: cover;
     background-position: center;  
+    background-image: url(../imagenes/fondo2.jpg);
+    background-attachment: fixed; /* La imagen permanecerá fija mientras se desplaza */
 }
 
 
@@ -219,7 +224,7 @@ section #containerPrincipal {
     padding-bottom: 0;
     margin-bottom: 20px;
     transition-property: color;
-    transition-duration: 0.8s;
+    transition-duration: 0.4s;
 }
 #container2 aside:hover h2{
     color: blueviolet;
@@ -234,7 +239,7 @@ section #containerPrincipal {
     margin: 0 50px;
     text-align: justify;
     transition-property: color;
-    transition-duration: 0.8s;
+    transition-duration: 0.4s;
 }
 
 #container2 aside:hover p{
@@ -288,7 +293,7 @@ section #containerPrincipal {
 
 .producto:hover {
     transform: scale(1.05);
-    transition: 0.5s;
+    transition: 0.4s;
     transition-duration: 0.5s;
     background-color: #eee;
     border: 5px solid #444;
